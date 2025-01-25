@@ -4,35 +4,34 @@
     <link rel="icon" type="icon" sizes="16x16" href="../favicon.ico" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="View and manage your profile at Plantio!"
+    />
     <title>Profile</title>
     <link rel="stylesheet" href="../css/style.css" />
     <script src="../js/main.mjs" type="module" defer></script>
   </head>
-  <body class="bg-gray-100 text-gray-800">
-    <!-- Header -->
+  <body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
     <header
       class="fixed top-0 left-0 w-full flex justify-between items-center bg-white shadow-md px-4 py-2 z-10"
     >
-      <!-- Logo -->
-      <a class="flex items-center">
-        <img
+      <a class="flex items-center"
+        ><img
           src="/assets/PLANTIOlogo.png"
           alt="Plantio logo"
           class="h-8 w-auto"
-        />
-      </a>
-
-      <!-- Hamburger Menu Button -->
+      /></a>
       <button
         id="menuToggle"
-        class="p-2 bg-teal-800 rounded focus:outline-none"
+        class="p-2 bg-teal-800 rounded focus:outline-none hover:bg-teal-700"
         aria-label="Open Menu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+          viewbox="0 0 24 24"
+          stroke="currentcolor"
           class="w-6 h-6 text-white"
         >
           <path
@@ -40,27 +39,24 @@
             stroke-linejoin="round"
             stroke-width="2"
             d="M4 6h16M4 12h16M4 18h16"
-          />
+          ></path>
         </svg>
       </button>
     </header>
-
-    <!-- Fullscreen Hamburger Menu -->
     <div
       id="menu"
       class="fixed inset-0 bg-teal-800 bg-opacity-95 hidden flex flex-col justify-center items-center z-20"
     >
-      <!-- Close Menu Button -->
       <button
         id="menuClose"
-        class="absolute top-4 right-4 p-2 bg-teal-950 rounded focus:outline-none"
+        class="absolute top-4 right-4 p-2 bg-teal-950 rounded focus:outline-none hover:bg-teal-700"
         aria-label="Close Menu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+          viewbox="0 0 24 24"
+          stroke="currentcolor"
           class="w-6 h-6 text-white"
         >
           <path
@@ -68,20 +64,15 @@
             stroke-linejoin="round"
             stroke-width="2"
             d="M6 18L18 6M6 6l12 12"
-          />
+          ></path>
         </svg>
       </button>
-
       <nav class="text-center space-y-10 text-white text-2xl flex flex-col">
         <a href="/feed/index.html" class="hover:underline">Feed</a>
         <a href="../index.html" class="hover:underline">Logout</a>
-        <a href="#" class="hover:underline">Privacy Policy</a>
       </nav>
     </div>
-
-    <!-- Main Content -->
-    <main class="pt-24 px-4 flex flex-col items-center">
-      <!-- Profile Section -->
+    <main class="flex-1 pt-24 px-4 flex flex-col items-center font-roboto">
       <section class="text-center">
         <div class="flex flex-col items-center">
           <img
@@ -89,7 +80,7 @@
             alt="Profile Image"
             class="w-24 h-24 rounded-full border-2 border-teal-800"
           />
-          <h1 class="mt-4 text-2xl font-semibold">Garden Gypsy</h1>
+          <h1 class="mt-4 text-2xl font-semibold mb-4">GardenGypsy</h1>
           <button
             class="mt-2 px-4 py-2 bg-teal-800 text-white rounded hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600"
           >
@@ -97,71 +88,211 @@
           </button>
         </div>
       </section>
-
-      <!-- Following/Followers Section -->
       <section class="mt-6 flex space-x-8 text-center">
         <div>
-          <h2 class="text-xl font-bold">200</h2>
+          <h2 class="text-xl font-bold">203</h2>
           <p class="text-gray-500">Following</p>
         </div>
         <div>
-          <h2 class="text-xl font-bold">150</h2>
+          <h2 class="text-xl font-bold">154</h2>
           <p class="text-gray-500">Followers</p>
         </div>
       </section>
-
-      <!-- User Posts Section -->
-      <section class="mt-8 w-full max-w-5xl">
+      <section class="mt-8 w-full max-w-5xl mb-30">
         <h2 class="text-xl font-semibold mb-4">User Posts</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Post Card 1 -->
-          <div class="bg-white shadow rounded-lg overflow-hidden">
+          <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col">
             <img
               src="../assets/chad-stembridgetomato.jpg"
               alt="Plant Post"
               class="w-full h-48 object-cover"
             />
-            <div class="p-4">
-              <h2 class="font-bold text-lg">How to Grow Your Own Food</h2>
-              <p class="text-gray-600 mt-2">
-                Growing your own food can be rewarding and sustainable. Learn
-                how to get started with these simple tips.
-              </p>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <div>
+                <h2 class="font-bold text-lg">How to Grow Your Own Food</h2>
+                <p class="text-gray-600 mt-2">
+                  Growing your own food can be rewarding and sustainable. Learn
+                  how to get started with these simple tips.
+                </p>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <button class="flex items-center space-x-1 group">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewbox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    class="group-hover:stroke-green-500 transition-colors duration-200"
+                    stroke="#2A353D"
+                    fill="none"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="m19.4626 3.99415c-2.6817-1.64492-5.0222-.98204-6.4282.07386-.5766.43295-.8648.64942-1.0344.64942s-.4578-.21647-1.0344-.64942c-1.40598-1.0559-3.74651-1.71878-6.42816-.07386-3.51937 2.15879-4.315719 9.28075 3.80209 15.28925 1.54619 1.1444 2.31927 1.7166 3.66047 1.7166s2.1143-.5722 3.6605-1.7166c8.1178-6.0085 7.3214-13.13046 3.8021-15.28925z"
+                    ></path>
+                  </svg>
+                  <span
+                    class="text-gray-700 text-sm group-hover:text-green-500 transition-colors duration-200"
+                    >15 Likes</span
+                  >
+                </button>
+                <button class="flex items-center space-x-1 group">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewbox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    class="group-hover:stroke-green-500 transition-colors duration-200"
+                    stroke="#2A353D"
+                    fill="none"
+                    stroke-width="1.5"
+                  >
+                    <g stroke-linejoin="round">
+                      <path
+                        d="m8.5 14.5h7m-7-5h3.5"
+                        stroke-linecap="round"
+                      ></path>
+                      <path
+                        d="m14.1706 20.8905c4.183-.278 7.515-3.6573 7.7892-7.8996.0536-.8302.0536-1.69 0-2.5202-.2742-4.24232-3.6062-7.62157-7.7892-7.89963-1.4271-.09486-2.917-.09466-4.3412 0-4.18301.27806-7.51499 3.65731-7.78916 7.89963-.05365.8302-.05365 1.69 0 2.5202.09986 1.5451.78319 2.9757 1.58767 4.1837.4671.8457.15883 1.9012-.3277 2.8232-.3508.6648-.5262.9972-.38537 1.2373.14084.2401.45542.2478 1.08459.2631 1.24424.0303 2.08325-.3225 2.74925-.8136.37772-.2785.56659-.4178.69676-.4338.13016-.016.38633.0895.89857.3005.46039.1896.99495.3066 1.48539.3392 1.4242.0947 2.9141.0949 4.3412 0z"
+                      ></path>
+                    </g>
+                  </svg>
+                  <span
+                    class="text-gray-700 text-sm group-hover:text-green-500 transition-colors duration-200"
+                    >5 Comments</span
+                  >
+                </button>
+              </div>
             </div>
           </div>
-
-          <!-- Post Card 2 -->
-          <div class="bg-white shadow rounded-lg overflow-hidden">
+          <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col">
             <img
               src="../assets/markusspiske.jpg"
               alt="Beginners Gardening Post"
               class="w-full h-48 object-cover"
             />
-            <div class="p-4">
-              <h2 class="font-bold text-lg">Gardening for Beginners</h2>
-              <p class="text-gray-600 mt-2">
-                Starting a garden is easier than you think! Here are the basics
-                for beginners.
-              </p>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <div>
+                <h2 class="font-bold text-lg">Gardening for Beginners</h2>
+                <p class="text-gray-600 mt-2">
+                  Starting a garden is easier than you think! Here are the
+                  basics for beginners.
+                </p>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <button class="flex items-center space-x-1 group">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewbox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    class="group-hover:stroke-green-500 transition-colors duration-200"
+                    stroke="#2A353D"
+                    fill="none"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="m19.4626 3.99415c-2.6817-1.64492-5.0222-.98204-6.4282.07386-.5766.43295-.8648.64942-1.0344.64942s-.4578-.21647-1.0344-.64942c-1.40598-1.0559-3.74651-1.71878-6.42816-.07386-3.51937 2.15879-4.315719 9.28075 3.80209 15.28925 1.54619 1.1444 2.31927 1.7166 3.66047 1.7166s2.1143-.5722 3.6605-1.7166c8.1178-6.0085 7.3214-13.13046 3.8021-15.28925z"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-700 text-sm group-hover:text-green-500"
+                    >18 Likes</span
+                  >
+                </button>
+                <button class="flex items-center space-x-1 group">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewbox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    class="group-hover:stroke-green-500 transition-colors duration-200"
+                    stroke="#2A353D"
+                    fill="none"
+                    stroke-width="1.5"
+                  >
+                    <g stroke-linejoin="round">
+                      <path
+                        d="m8.5 14.5h7m-7-5h3.5"
+                        stroke-linecap="round"
+                      ></path>
+                      <path
+                        d="m14.1706 20.8905c4.183-.278 7.515-3.6573 7.7892-7.8996.0536-.8302.0536-1.69 0-2.5202-.2742-4.24232-3.6062-7.62157-7.7892-7.89963-1.4271-.09486-2.917-.09466-4.3412 0-4.18301.27806-7.51499 3.65731-7.78916 7.89963-.05365.8302-.05365 1.69 0 2.5202.09986 1.5451.78319 2.9757 1.58767 4.1837.4671.8457.15883 1.9012-.3277 2.8232-.3508.6648-.5262.9972-.38537 1.2373.14084.2401.45542.2478 1.08459.2631 1.24424.0303 2.08325-.3225 2.74925-.8136.37772-.2785.56659-.4178.69676-.4338.13016-.016.38633.0895.89857.3005.46039.1896.99495.3066 1.48539.3392 1.4242.0947 2.9141.0949 4.3412 0z"
+                      ></path>
+                    </g>
+                  </svg>
+                  <span class="text-gray-700 text-sm group-hover:text-green-500"
+                    >4 Comments</span
+                  >
+                </button>
+              </div>
             </div>
           </div>
-
-          <!-- Post Card 3 -->
-          <div class="bg-white shadow rounded-lg overflow-hidden">
+          <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col">
             <img
               src="../assets/jonathankemper.jpg"
               alt="Eco Gardening Tips Post"
               class="w-full h-48 object-cover"
             />
-            <div class="p-4">
-              <h2 class="font-bold text-lg">Eco-Friendly Gardening Tips</h2>
-              <p class="text-gray-600 mt-2">
-                Make your garden more eco-friendly with these practical tips.
-              </p>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <div>
+                <h2 class="font-bold text-lg">Eco-Friendly Gardening Tips</h2>
+                <p class="text-gray-600 mt-2">
+                  Make your garden more eco-friendly with these practical tips.
+                </p>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <button class="flex items-center space-x-1 group">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewbox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    class="group-hover:stroke-green-500 transition-colors duration-200"
+                    stroke="#2A353D"
+                    fill="none"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="m19.4626 3.99415c-2.6817-1.64492-5.0222-.98204-6.4282.07386-.5766.43295-.8648.64942-1.0344.64942s-.4578-.21647-1.0344-.64942c-1.40598-1.0559-3.74651-1.71878-6.42816-.07386-3.51937 2.15879-4.315719 9.28075 3.80209 15.28925 1.54619 1.1444 2.31927 1.7166 3.66047 1.7166s2.1143-.5722 3.6605-1.7166c8.1178-6.0085 7.3214-13.13046 3.8021-15.28925z"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-700 text-sm group-hover:text-green-500"
+                    >11 Likes</span
+                  >
+                </button>
+                <button class="flex items-center space-x-1 group">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewbox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    class="group-hover:stroke-green-500 transition-colors duration-200"
+                    stroke="#2A353D"
+                    fill="none"
+                    stroke-width="1.5"
+                  >
+                    <g stroke-linejoin="round">
+                      <path
+                        d="m8.5 14.5h7m-7-5h3.5"
+                        stroke-linecap="round"
+                      ></path>
+                      <path
+                        d="m14.1706 20.8905c4.183-.278 7.515-3.6573 7.7892-7.8996.0536-.8302.0536-1.69 0-2.5202-.2742-4.24232-3.6062-7.62157-7.7892-7.89963-1.4271-.09486-2.917-.09466-4.3412 0-4.18301.27806-7.51499 3.65731-7.78916 7.89963-.05365.8302-.05365 1.69 0 2.5202.09986 1.5451.78319 2.9757 1.58767 4.1837.4671.8457.15883 1.9012-.3277 2.8232-.3508.6648-.5262.9972-.38537 1.2373.14084.2401.45542.2478 1.08459.2631 1.24424.0303 2.08325-.3225 2.74925-.8136.37772-.2785.56659-.4178.69676-.4338.13016-.016.38633.0895.89857.3005.46039.1896.99495.3066 1.48539.3392 1.4242.0947 2.9141.0949 4.3412 0z"
+                      ></path>
+                    </g>
+                  </svg>
+                  <span class="text-gray-700 text-sm group-hover:text-green-500"
+                    >3 Comments</span
+                  >
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <footer class="bg-teal-800 text-white text-center py-4 mt-60">
+      <p class="text-sm font-roboto">All rights reserved Plantio © 2025</p>
+    </footer>
   </body>
 </html>

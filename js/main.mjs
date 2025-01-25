@@ -36,5 +36,5 @@ if (loginButton) {
 import { initializePopup } from './popup.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
-  initializePopup(); // Initialize the popup functionality only on the feed page
+    initializePopup(); // Initialize the popup functionality only on the feed page
 });
