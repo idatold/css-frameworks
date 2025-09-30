@@ -1,4 +1,4 @@
-import '../css/style.css';
+
 // Initialize hovering video login and register
 import { initializeVideoControls } from './videoHover.mjs';
 

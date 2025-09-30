@@ -2,12 +2,15 @@
   "name": "css-frameworks",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "dev": "tailwindcss -i ./css/style.css -o ./css/style.css --watch",
+    "serve": "vite",
+    "build": "tailwindcss -i ./css/style.css -o ./css/style.css --minify",
+    "test": "echo \"no tests\"",
+    "lint": "echo \"no lint configured\""
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.1",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
     "vite": "^6.0.7"
   }
